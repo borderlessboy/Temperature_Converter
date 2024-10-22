@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <form method="POST">
+            <label for="temperature">Enter Temperature:</label>
+            <input type="number" id="temperature" name="temperature" required>
+            
+            <label for="from_unit">From:</label>
+            <select id="from_unit" name="from_unit">
+                <option value="Celsius">Celsius</option>
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            
+            <label for="to_unit">To:</label>
+            <select id="to_unit" name="to_unit">
+                <option value="Fahrenheit">Fahrenheit</option>
+                <option value="Celsius">Celsius</option>
+                <option value="Kelvin">Kelvin</option>
+            </select>
+            
+            <button type="submit">Convert</button>
+        </form>
+
+        {% if result is not none %}
+        <div class="result">
+            <p>Converted Temperature: {{ result }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
