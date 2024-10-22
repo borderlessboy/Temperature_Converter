@@ -8,16 +8,16 @@ A simple temperature conversion web app using Flask.
    
 
 2. Install the dependencies:
-'
+'''
 pip install flask   
-'
+'''
 
 ## Usage
 
 1. Run the app: 
-   '
+   '''
    $ python app.py
-   '
+   '''
 
 2. Visit http://localhost:5000/ in your browser.
 
